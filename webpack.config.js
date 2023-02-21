@@ -35,12 +35,35 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap: true,
+              removeCR: true,
+            }
+          },
+          {
+            loader: 'sass-loader', options: {
+              sourceMap: true,
+            }
+          }
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource'
-      }
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2|svg)$/,
+        type: 'asset/resource',
+      },
     ]
   },
 }
