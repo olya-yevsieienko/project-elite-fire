@@ -1,0 +1,21 @@
+@import '~normalize.css';
+
+@import './utils/reset.scss';
+@import './utils/variables.scss';
+@import './utils/fonts.scss';
+@import './utils/mixins.scss';
+@import './utils/extends.scss';
+
+@import './blocks/page.scss';
+@import './blocks/slider.scss';
+@import './blocks/button.scss';
+
+@import './blocks/section-high-fire.scss';
+@import './blocks/section-refueling.scss';
+@import './blocks/section-smart-fire.scss';
+@import './blocks/section-fuel-block.scss';
+@import './blocks/section-catalog.scss';
+
+* {
+  box-sizing: border-box;
+}

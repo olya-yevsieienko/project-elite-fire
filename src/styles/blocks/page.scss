@@ -1,0 +1,31 @@
+.page {
+  font-family: 'MainFont', serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: $text-color-primary;
+  
+  &__body {
+    color: $text-color-primary;
+    background-color: $dark-grey;
+  }
+
+  &__section {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 320px;
+  
+    @include onTablet {
+      padding: 0 42px;
+      max-width: 744px;
+    }
+  
+    @include onDesktop {
+      padding: 0 120px;
+      max-width: 1440px;
+    }
+  }
+
+  &__title {
+    @extend %title-h2;
+  }
+}

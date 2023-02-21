@@ -1,0 +1,91 @@
+%margin-section {
+  margin-bottom: 40px;
+
+  @include onTablet {
+    margin-bottom: 100px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 200px;
+  }
+}
+
+%title-h2 {
+  font-size: 24px;
+  font-weight: 250;
+  line-height: 150%;
+
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  background: linear-gradient(240.22deg, #FFFFFF 31.8%, rgba(255, 255, 255, 0) 90.73%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @include onTablet {
+    font-size: 32px;
+  }
+
+  @include onDesktop {
+    font-size: 40px;
+  }
+}
+
+%title-h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+%title-h4 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+
+  @include onTablet {
+    font-size: 22px;
+  }
+
+  @include onDesktop {
+    font-size: 24px;
+  }
+}
+
+%title-h5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $h4-color;
+  
+  @include onTablet {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+%descrptn {
+  font-size: 16px;
+  line-height: 165%;
+  letter-spacing: 0.05em;
+  
+  @include onTablet {
+    font-size: 18px;
+  }
+
+  @include onDesktop {
+    font-size: 20px;
+  }
+}
+
+%hover {
+  transition: color .3s ease;
+
+  &:hover {
+    color: $warm-yellow;
+    font-weight: bold;
+  }
+}
+
+

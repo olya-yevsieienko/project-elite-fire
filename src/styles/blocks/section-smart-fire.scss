@@ -1,0 +1,41 @@
+.section-smart-fire {
+  &__content {
+    @extend %margin-section;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title-container {
+    display: flex;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include onTablet {
+      padding: 0 70px;
+    }
+    
+    @include onDesktop {
+      padding: 0 80px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #949494;
+  }
+
+  &__descrptn {
+    @extend %descrptn;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
