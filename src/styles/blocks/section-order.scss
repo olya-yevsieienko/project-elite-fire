@@ -6,14 +6,14 @@
   }
 
   &__title {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 
     @include onTablet {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     @include onDesktop {
-      margin-bottom: 68px;
+      margin-bottom: 44px;
     }
   }
 
@@ -35,20 +35,221 @@
   }
 
   &__image {
-    margin-bottom: 20px;
-    max-width: 520px;
+    margin: 16px 0 20px 0;
     width: 100%;
+
+    @include onTablet {
+      margin: 24px 0 40px 0;
+    }
+
+    @include onDesktop {
+      margin: 24px 0 68px 0;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    &--row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--price {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      @include onDesktop {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend %title-h6; 
+  }
+
+  &__width {
+    font-weight: 400;
+    font-size: 24px;
+
+    @include onTablet {
+      font-size: 26px;
+    }
+
+    @include onDesktop {
+      font-size: 28px;
+    }
+
+    &--small {
+      font-size: 18px;
+    }
+  }
+
+  &__color {
+    width: 24px;
+    height: 24px;
+    left: 370px;
+    top: 6511px;
+
+    background: #B8542A;
+    border-radius: 500px;
+
+    @include onTablet {
+      width: 26px;
+      height: 26px;
+    }
+
+    @include onDesktop {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    left: 78px;
+    width: 30px;
+    height: 30px;
+    background: $light-yellow;
+    border-radius: 2px;
+
+    &::before {
+      content: '';
+      position: relative;
+      right: 250px;
+      top: 50%;
+      display: block;
+      width: 268px;
+      height: 2px;
+      background: $light-yellow;
+    }
+
+    &::after {
+      content: '';
+      position: relative;
+      right: 130px;
+      top: 46%;
+      z-index: -1;
+      display: block;
+      width: 268px;
+      height: 2px;
+      background: $slider-color;
+    }
+  }
+
+  &__rend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+  }
+
+  &__choose-panel {
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    height: 30px;
+    width: 300px;
+  }
+
+  &__choose {
+    margin-top: 4px;
+    width: 9px;
+    height: 2px;
+    background: $slider-color;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &--active {
+      background: $warm-yellow;
+    }
+  }
+
+  &__list {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10%;
 
     @include onTablet {
       margin-bottom: 40px;
     }
 
     @include onDesktop {
-      margin-bottom: 68px;
+      margin-bottom: 60px;
+      gap: 25%;
     }
   }
 
-  &__options {
+  &__list-item {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    line-height: 30px;
+  }
+
+  &__select-item {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $light-yellow;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+      &::after {
+        content: '';
+        display: block;
+        background: $warm-yellow--hover;
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+        opacity: 80%;
+      }
+    }
+
+    &--active {
+      background-color: $warm-yellow;
+      &::after {
+        content: '+';
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        color: $dark-grey;
+      }
+    }
+  }
+
+  &__price {
+    text-align: center;
+    line-height: 110%;
+    color: $warm-yellow;
+
+    @include onTablet {
+      text-align: left;
+      font-size: 30px;
+    }
+
+    @include onDesktop {
+      font-size: 36px;
+    }
+  }
+
+  &__button {
+    &::before {
+      content: 'Оставить заявку';
+      position: absolute;
+      z-index: 2;
+    }
   }
 }

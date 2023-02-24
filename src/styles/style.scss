@@ -10,6 +10,9 @@
 @import './blocks/slider.scss';
 @import './blocks/button.scss';
 
+@import './blocks/menu.scss';
+@import './blocks/nav.scss';
+@import './blocks/header.scss';
 @import './blocks/section-high-fire.scss';
 @import './blocks/section-refueling.scss';
 @import './blocks/section-smart-fire.scss';
@@ -17,6 +20,7 @@
 @import './blocks/section-catalog.scss';
 @import './blocks/section-galery.scss';
 @import './blocks/section-order.scss';
+@import './blocks/footer.scss';
 
 * {
   box-sizing: border-box;

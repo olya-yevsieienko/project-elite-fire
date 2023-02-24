@@ -7,7 +7,64 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body class="page__body">
-    <nav></nav>
+    <nav class="page__section nav">
+      <div class="nav__content">
+        <div class="nav__info">
+          <a href="/">
+            <img src="./images/icons/elite-fire.svg" alt="ELITE FIRE" class="nav__logo-image">
+          </a>
+          <p class="nav__name-ru">
+            Автоматические биокамины
+          </p>
+        </div>
+  
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li>
+              <a href="#продукция" class="nav__link">продукция</a>
+            </li>
+            <li>
+              <a href="#конструкция" class="nav__link">конструкция</a>
+            </li>
+            <li>
+              <a href="#опыт" class="nav__link">опыт</a>
+            </li>
+            <li>
+              <a href="#контакты" class="nav__link">контакты</a>
+            </li>
+          </ul>
+
+          <div class="nav__call">
+            <img src="./images/icons/call.svg" alt="Позвонить" class="nav__call-icon">
+          </div>
+        </div>
+
+        <a href="#menu" class="nav__btn-container">
+          <img src="./images/icons/menu.svg" alt="Меню" class="nav__menu-btn">
+        </a>
+
+        <div class="page__menu nav__mobile-menu menu" id="menu">
+          <a href="#" class="nav__btn-container menu__btn">
+            <p class="menu__cross">X</p>
+          </a>
+
+          <ul class="menu__list" >
+            <li class="menu__item">
+              <a href="#продукция" class="menu__link">продукция</a>
+            </li>
+            <li class="menu__item">
+              <a href="#конструкция" class="menu__link">конструкция</a>
+            </li>
+            <li class="menu__item">
+              <a href="#опыт" class="menu__link">опыт</a>
+            </li>
+            <li class="menu__item">
+              <a href="#контакты" class="menu__link">контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <header></header>
 
     <main class="page__main">
@@ -280,7 +337,7 @@
         </div>
       </section>
 
-      <section class="page__section section-order">
+      <section class="page__section section-order" hidden>
         <div class="section-order__content">
           <h3 class="page__title section-order__title">
             вы автор вашего камина
@@ -289,7 +346,7 @@
             <div class="section-order__block">
               <img src="./images/kamin7.png" alt="Камин" class="section-order__image">
   
-              <div class="section-order__options">
+              <div class="section-order__options--row">
                 <div class="">
                   <h6 class="section-order__subtitle">длина</h6>
                   <p class="section-order__width">
@@ -307,52 +364,79 @@
             <div class="section-order__block">
               <div class="section-order__options">
                 <h6 class="section-order__subtitle">Выберите длину</h6>
-                <p class="section-order__width--small">0.5 м</p>
-                <div class="section-order__slider"></div>
-                <p class="section-order__width--small">10 м</p>
+                <div class="section-order__options--row">
+                  <p class="section-order__width--small">0.5 м</p>
+                  <div class="section-order__slider"></div>
+                  <p class="section-order__width--small">10 м</p>
+                </div>
               </div>
   
               <div class="section-order__options">
                 <h6 class="section-order__subtitle">Лицевая панель</h6>
+                <div class="section-order__rend">
+                  <img src="./images/icons/slider-left.svg" alt="Влево">
+                  <img src="./images/rend.png" alt="">
+                  <img src="./images/icons/slider-right.svg" alt="">
+                </div>
+                <div class="section-order__choose-panel">
+                  <div class="section-order__choose section-order__choose--active"></div>
+                  <div class="section-order__choose"></div>
+                  <div class="section-order__choose"></div>
+                  <div class="section-order__choose"></div>
+                </div>
               </div>
   
               <div class="section-order__options">
                 <h6 class="section-order__subtitle">дополнительные функции</h6>
                 <ul class="section-order__list">
-                  <div class="section-order__list-block">
-                    <div>
+                  <div>
+                    <div class="section-order__list-item">
                       <ul class="section-order__item">Защита от детей</ul>
-                      <ul class="section-order__item">Wi-Fi</ul>
-                      <ul class="section-order__item">Защита от детей</ul>
-                      <ul class="section-order__item">Wi-Fi</ul>
+                      <div class="section-order__select-item section-order__select-item--active"></div>
                     </div>
-                    <div>
+
+                    <div class="section-order__list-item">
+                      <ul class="section-order__item">Wi-Fi</ul>
                       <div class="section-order__select-item"></div>
+                    </div>
+
+                    <div class="section-order__list-item">
+                      <ul class="section-order__item">Защита от детей</ul>
                       <div class="section-order__select-item"></div>
-                      <div class="section-order__select-item"></div>
+                    </div>
+
+                    <div class="section-order__list-item">
+                      <ul class="section-order__item">Wi-Fi</ul>
                       <div class="section-order__select-item"></div>
                     </div>
                   </div>
-   
-                  <div class="section-order__list-block">
-                    <div>
+
+                  <div>
+                    <div class="section-order__list-item">
                       <ul class="section-order__item">Защита от детей</ul>
-                      <ul class="section-order__item">Wi-Fi</ul>
-                      <ul class="section-order__item">Защита от детей</ul>
-                      <ul class="section-order__item">Wi-Fi</ul>
+                      <div class="section-order__select-item"></div>
                     </div>
-                    <div>
+
+                    <div class="section-order__list-item">
+                      <ul class="section-order__item">Wi-Fi</ul>
                       <div class="section-order__select-item"></div>
-                      <div class="section-order__select-item"></div>
-                      <div class="section-order__select-item"></div>
+                    </div>
+
+                    <div class="section-order__list-item">
+                      <ul class="section-order__item">Защита от детей</ul>
+                      <div class="section-order__select-item section-order__select-item--active"></div>
+                    </div>
+
+                    <div class="section-order__list-item">
+                      <ul class="section-order__item">Wi-Fi</ul>
                       <div class="section-order__select-item"></div>
                     </div>
                   </div>
                 </ul>
               </div>
   
-              <div class="section-order__options">
-                <div class="">
+              <div class="section-order__options--price">
+                <div class="section-order__options">
                   <h6 class="section-order__subtitle">стоимость</h6>
                   <div class="section-order__price">99 000₽</div>
                 </div>
@@ -363,6 +447,59 @@
           </div>
         </div>
       </section>
+
+      <footer class="page__footer footer" hidden>
+        <div class="footer__content">
+          <div class="footer__main">
+            <h2 class="page__title footer__title">связаться с нами</h2>
+            <div class="footer__info">
+              <div class="footer__contact">
+                <p class="footer__subtitle">WhatsApp</p>
+                <p class="footer__text">+7911 306 4144</p>
+              </div>
+      
+              <div class="footer__contact">
+                <p class="footer__subtitle">Телеграмм</p>
+                <p class="footer__text">@elite_fire</p>
+              </div>
+      
+              <div class="footer__contact">
+                <p class="footer__subtitle">Почта</p>
+                <p class="footer__text">info@elite-fire.ru</p>
+              </div>
+      
+              <div class="footer__contact">
+                <p class="footer__subtitle">Наш адрес</p>
+                <p class="footer__text">
+                  Россия, г. Москва,
+                  <br> 
+                  Варшавское шоссе, 170 г
+                </p>
+              </div>
+      
+              <div class="footer__contact">
+                <p class="footer__subtitle">Телефон</p>
+                <p class="footer__phone">
+                  8 911 306 4144
+                </p>
+              </div>
+      
+              <div class="footer__contact">
+                <a href="" class="footer__button">
+                  Связаться с менеджером
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom page__section">
+          <img src="./images/icons/elite-fire.svg" alt="ELITE FIRE" class="footer__logo">
+          <p class="footer__text--bottom">2020-2021</p>
+          <p class="footer__text--bottom">ООО “МЕТАЛЛЭЛЕКТРОИНВЕСТ”</p>
+          <p class="footer__text--bottom">Пользовательское соглашение</p>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

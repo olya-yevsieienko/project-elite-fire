@@ -1,0 +1,41 @@
+.menu {
+  margin: 0 auto;
+  background-color: $dark-grey;
+
+  &__list {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 8px;
+    font-size: 20px;
+    color: inherit;
+    text-transform: uppercase;
+
+    transition: border-color 0.3s;
+
+    &:hover {
+      @extend %hover;
+    }
+  }
+
+  &__btn {
+    margin-top: 24px;
+  }
+
+  &__cross {
+    font-size: 30px;
+    font-weight: bold;
+    color: $dark-grey;
+  }
+}
+

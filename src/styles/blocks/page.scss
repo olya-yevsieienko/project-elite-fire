@@ -3,10 +3,37 @@
   font-size: 14px;
   letter-spacing: 0.05em;
   color: $text-color-primary;
+  scroll-behavior: smooth;
   
   &__body {
     color: $text-color-primary;
     background-color: $dark-grey;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    display: block;
+    max-width: 320px;
+    height: 100vh;
+  
+    transform: translateX(-200%);
+    transition: transform 0.3s;
+  
+    &:target {
+      transform: translateX(0);
+    }
+
+    @include onTablet {
+      display: none;
+    }
   }
 
   &__section {
@@ -27,5 +54,9 @@
 
   &__title {
     @extend %title-h2;
+  }
+
+  &__footer {
+    background-color: $footer-color;
   }
 }

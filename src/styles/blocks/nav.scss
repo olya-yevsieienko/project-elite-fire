@@ -1,0 +1,119 @@
+.nav {
+  &__content {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    
+    @include onDesktop {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__logo-image {
+    width: 120px;
+    height: 60px;
+
+    @include onTablet {
+      width: 140px;
+      height: 70px;
+    }
+
+    @include onDesktop{
+      margin-right: 30px;
+    }
+  }
+
+  &__name-ru {
+    width: 100px;
+    color: $text-color-secondary;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__list {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 380px;
+    }
+
+    @include onDesktop {
+      width: 436px;
+    }
+  }
+
+  &__link {
+    padding: 20px 0;
+    color: $text-color-secondary;
+    text-transform: uppercase;
+
+    &:hover {
+      @extend %hover;
+    }
+  }
+
+  &__call {
+    display: none;
+
+    @include onTablet {
+      margin-left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background: $light-yellow;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: .3s easy;
+    }
+    
+    @include onDesktop {
+      margin-left: 12%;
+    }
+
+    &:hover {
+      background: $warm-yellow;
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: $light-yellow;
+    border-radius: 2px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__menu-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
