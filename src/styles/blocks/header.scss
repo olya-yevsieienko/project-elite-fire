@@ -1,0 +1,167 @@
+.header {
+  &__content {
+    display: block;
+    height: 100vh;
+  }
+
+  &__main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include onDesktop {
+      flex-direction: row;
+    }
+  }
+
+  &__info {
+    top: 0;
+    max-width: 750px;
+    width: 100%;
+    
+    @include onTablet {
+      position: absolute;
+    }
+  }
+
+  &__title {
+    @extend %title-h1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 360px;
+      height: 400px;
+      left: -280px;
+      top: 0px;
+      z-index: -1;
+      background: #000000;
+      filter: blur(250px);
+      border-radius: 300px;
+      transform: rotate(45deg);
+
+      @include onTablet {
+        width: 600px;
+        height: 728px;
+      }
+
+      @include onDesktop {
+        width: 874px;
+        height: 928px;
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-size: 16px;
+    color: $warm-yellow;
+
+    @include onTablet {
+      margin-bottom: 28px;
+      font-size: 18px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 86px;
+      font-size: 18px;
+    }
+  }
+
+  &__image-wrap {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 460px;
+      height: 400px;
+      right: -300px;
+      top: -300px;
+      z-index: -1;
+      background: #000000;
+      filter: blur(250px);
+      border-radius: 300px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 100px;
+      top: 232px;
+      z-index: -1;
+      display: block;
+      width: 80px;
+      height: 40px;
+      background: #FFCF7A;
+      filter: blur(50px);
+      border-radius: 500px;
+      transform: rotate(161.87deg);
+
+      @include onTablet {
+        right: 18%;
+        top: 200px;
+        width: 220px;
+        height: 88px;
+      }
+
+      @include onDesktop {
+        right: 16%;
+        top: 120px;
+      }
+    }
+  }
+
+  &__image {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    
+    @include onTablet {
+      position: relative;
+      top: 140px;
+    }
+    
+    @include onDesktop {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 58%;
+    }
+  }
+
+  &__benefits {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+
+    @include onTablet {
+      justify-content: flex-start;
+    }
+  }
+
+  &__option {
+    text-align: center;
+ 
+    @include onTablet {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    @include onDesktop {
+      &:not(:last-child) {
+        margin-right: 80px;
+      }
+    }
+  }
+
+  &__icon {
+    margin-bottom: 8px;
+    height: 16px;
+
+    @include onTablet {
+      margin-bottom: 16px;
+    }
+  }
+}
