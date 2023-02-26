@@ -151,12 +151,23 @@
   
             <div class="section-refueling__image-container">
               <img src="./images/kamin3.png" alt="Камин" class="section-refueling__image">
-              <!-- <img src="./images/light3.svg" alt="" class="section-refueling__light"> -->
+              <div class="section-refueling__label">
+                <div class="section-refueling__label-text">
+                  <p class="section-refueling__label-p">3,5</p>
+                  <p class="section-refueling__label-p">минуты</p>
+                  <p class="section-refueling__label-p">
+                    и бак наполнен
+                    <br>
+                    на 100%
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="section-refueling__btns">
-            <div class="section-refueling__btns-group">
+
+          <div class="section-refueling__wrap">
+            <div class="section-refueling__icons-group">
               <img src="./images/icons/u-button.svg" alt="">
               <img src="./images/icons/power-button.svg" alt="">
             </div>
@@ -191,11 +202,17 @@
             <h3 class="section-fuel-block__title section-fuel-block__title">
               Топливный блок
             </h3>
-            <div class="section-fuel-block__line"></div>
-            <img src="./images/kamin5.png" alt="Камин" class="section-fuel-block__image">
+            <div class="section-fuel-block__line">
+              <p class="">
+                Лицевая панель из  жаропрочной нержавеющей стали толщиной 5 мм
+              </p>
+            </div>
+            <div class="section-fuel-block__image-container">
+              <img src="./images/kamin5.png" alt="Камин" class="section-fuel-block__image">
+            </div>
 
             <h4 class="section-fuel-block__subtitle">Варианты отделки</h4>
-            <ul class="section-fuel-block__options">
+            <ul class="section-fuel-block__options section-fuel-block__first-options">
               <div class="slider__item">
                 <li class="section-fuel-block__list-item section-fuel-block__list-item--small">Черный матовый</li>
                 <li class="section-fuel-block__list-item section-fuel-block__list-item--small">Шлифованная сталь</li>
@@ -252,20 +269,14 @@
             <div class="section-fuel-block__presentation slider">
               <div class="section-fuel-block__images-container">
                 <div class="slider__image-wrap">
-                  <img src="./images/kamin.png" alt="Камин" class="section-fuel-block__slider-image slider__image">
-                </div>
-                <div class="slider__image-wrap">
-                  <img src="./images/kamin2.png" alt="Камин" class="section-fuel-block__slider-image slider__image">
-                </div>
-                <div class="slider__image-wrap">
-                  <img src="./images/kamin4.png" alt="Камин" class="section-fuel-block__slider-image slider__image">
+                  <img src="./images/dummy3.jpg" alt="Камин" class="section-fuel-block__slider-image slider__image">
                 </div>
               </div>
   
-              <a onclick="prevSlide()" class="slider__left">
+              <a class="slider__left">
                 <img src="./images/icons/slider-left.svg" alt="Влево">
               </a>
-              <a onclick="nextSlide()" class="slider__right">
+              <a class="slider__right">
                 <img src="./images/icons/slider-right.svg" alt="Вправо">
               </a>
             </div>
@@ -285,26 +296,18 @@
               </p>
   
               <div class="section-catalog__slider slider">
-                <div class="slider__image-wrap">
-                  <img src="./images/kamin.png" alt="Камин" class="slider__image">
-                </div>
-                <div class="slider__image-wrap">
-                  <img src="./images/kamin2.png" alt="Камин" class="slider__image">
-                </div>
-                <div class="slider__image-wrap">
-                  <img src="./images/kamin4.png" alt="Камин" class="slider__image">
-                </div>
+                <img src="./images/dummy.jpg" alt="Камин" class="slider__image">
   
-                <a onclick="prevSlide()" class="slider__left">
+                <a class="slider__left">
                   <img src="./images/icons/slider-left.svg" alt="Влево">
                 </a>
-                <a onclick="nextSlide()" class="slider__right">
+                <a class="slider__right">
                   <img src="./images/icons/slider-right.svg" alt="Вправо">
                 </a>
               </div>
             </div>
   
-            <div class="section-catalog__block">
+            <div class="section-catalog__block section-catalog__block--slide">
               <h3 class="section-catalog__title">Аксессуары</h3>
               <p class="section-catalog__descrptn">
                 Защитные экраны, Дверцы, Стемалит, Дрова, 
@@ -313,20 +316,12 @@
               </p>
   
               <div class="section-catalog__slider slider">
-                <div class="slider__image-wrap">
-                  <img src="./images/kamin.png" alt="Камин" class="slider__image">
-                </div>
-                <div class="slider__image-wrap">
-                  <img src="./images/kamin2.png" alt="Камин" class="slider__image">
-                </div>
-                <div class="slider__image-wrap">
-                  <img src="./images/kamin4.png" alt="Камин" class="slider__image">
-                </div>
+                <img src="./images/dummy1.jpeg" alt="Камин" class="slider__image">
   
-                <a onclick="prevSlide()" class="slider__left">
+                <a class="slider__left">
                   <img src="./images/icons/slider-left.svg" alt="Влево">
                 </a>
-                <a onclick="nextSlide()" class="slider__right">
+                <a class="slider__right">
                   <img src="./images/icons/slider-right.svg" alt="Вправо">
                 </a>
               </div>
@@ -350,9 +345,9 @@
           <h2 class="page__title section-galery__title">Есть задача? Есть решение!</h2>
 
           <div class="section-galery__fotos section-galery__fotos--first">
-            <img src="./images/kamin.png" alt="Камин" class="section-galery__image">
-            <img src="./images/kamin.png" alt="Камин" class="section-galery__image">
-            <img src="./images/kamin.png" alt="Камин" class="section-galery__image">
+            <img src="./images/dummy.jpg" alt="Камин" class="section-galery__image">
+            <img src="./images/dummy1.jpeg" alt="Камин" class="section-galery__image">
+            <img src="./images/dummy2.jpg" alt="Камин" class="section-galery__image">
           </div>
 
           <h2 class="page__title section-galery__title">
@@ -362,9 +357,9 @@
           </h2>
 
           <div class="section-galery__fotos">
-            <img src="./images/kamin.png" alt="Камин" class="section-galery__image">
-            <img src="./images/kamin.png" alt="Камин" class="section-galery__image">
-            <img src="./images/kamin.png" alt="Камин" class="section-galery__image">
+            <img src="./images/dummy3.jpg" alt="Камин" class="section-galery__image">
+            <img src="./images/dummy4.jpeg" alt="Камин" class="section-galery__image">
+            <img src="./images/dummy.jpg" alt="Камин" class="section-galery__image">
           </div>
         </div>
       </section>
@@ -398,7 +393,13 @@
                 <h6 class="section-order__subtitle">Выберите длину</h6>
                 <div class="section-order__options--row">
                   <p class="section-order__width--small">0.5 м</p>
-                  <div class="section-order__slider"></div>
+
+                  <div class="section-order__slider-box">
+                    <div class="section-order__slider-lines">
+                      <div class="section-order__slider"></div>
+                    </div>
+                  </div>
+
                   <p class="section-order__width--small">10 м</p>
                 </div>
               </div>
@@ -497,23 +498,23 @@
       
               <div class="footer__contact">
                 <p class="footer__subtitle">Почта</p>
-                <p class="footer__text">info@elite-fire.ru</p>
+                <a href="mailto:info@elite-fire.ru" class="footer__text">info@elite-fire.ru</p>
               </div>
       
               <div class="footer__contact">
                 <p class="footer__subtitle">Наш адрес</p>
                 <p class="footer__text">
                   Россия, г. Москва,
-                  <br> 
+                  <br>
                   Варшавское шоссе, 170 г
                 </p>
               </div>
       
               <div class="footer__contact">
                 <p class="footer__subtitle">Телефон</p>
-                <p class="footer__phone">
+                <a href="tel: 8 911 306 4144" class="footer__phone">
                   8 911 306 4144
-                </p>
+                </a>
               </div>
       
               <div class="footer__contact">

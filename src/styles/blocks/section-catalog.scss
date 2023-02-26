@@ -3,6 +3,7 @@
     @extend %margin-section;
     display: flex;
     flex-direction: column;
+    height: 100vh;
   }
 
   &__preview {
@@ -25,6 +26,14 @@
 
   &__block {
     width: 100%;
+
+    &--slide {
+      display: none;
+
+      @include onTablet {
+        display: block;
+      }
+    }
   }
 
   &__title {
@@ -36,16 +45,6 @@
     line-height: 28px;
   }
 
-  &__slider {
-    min-height: 200px;
-    width: 100%;
-    background-color: #000;
-
-    @include onTablet {
-      height: 20vw;
-    }
-  }
-
   &__bottom {
     display: flex;
     flex-direction: column;
@@ -53,6 +52,7 @@
   }
 
   &__text {
+    margin-bottom: 20px;
     font-weight: 300;
     font-size: 20px;
     line-height: 30px;
@@ -69,17 +69,44 @@
       font-size: 30px;
       line-height: 44px;
     }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 180px;
+      left: 60px;
+      z-index: -1;
+      display: block;
+      width: 80%;
+      height: 50px;
+
+      background: rgba(18, 18, 18, 0.7);
+      filter: blur(75px);
+      border-radius: 300px;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+
+      @include onTablet {
+        left: 80px;
+        z-index: -1;
+        display: block;
+        width: 72%;
+        height: 50px;
+      }
+  
+      @include onDesktop {
+        bottom: 80px;
+        left: 140px;
+        z-index: -1;
+        display: block;
+        width: 80%;
+        height: 50px;
+      }
+    }
   }
 
   &__button {
-    // &::after {
-    //   background: rgba(18, 18, 18, 0.7);
-    //   filter: blur(75px);
-    //   border-radius: 300px;
-    //   transform: matrix(1, 0, 0, -1, 0, 0);
-    //   z-index: -1;
-    // }
-    
+    position: relative;
+
     &::before {
       content: 'Получить каталог!';
       position: absolute;

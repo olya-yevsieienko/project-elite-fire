@@ -16,4 +16,8 @@
     height: 58px;
     z-index: 1;
   }
+
+  &:hover {
+    background: $warm-yellow;
+  }
 }

@@ -20,6 +20,7 @@
   }
   
   &__title {
+    padding-top: 20px;
     text-align: left;
     background: linear-gradient(231.91deg, #FFFFFF 37.36%, rgba(255, 255, 255, 0) 99.66%);
     -webkit-background-clip: text;
@@ -28,10 +29,12 @@
 
     @include onTablet {
       margin-bottom: 60px;
+      padding-top: 40px;
     }
   
     @include onDesktop {
       margin-bottom: 72px;
+      padding-top: 72px;
     }
   }
 
@@ -67,6 +70,7 @@
   &__text {
     font-size: 16px;
     line-height: 160%;
+    color: inherit;
 
     @include onTablet {
       font-size: 18px;
@@ -74,6 +78,10 @@
 
     @include onDesktop {
       font-size: 22px;
+    }
+
+    &:hover {
+      color: $warm-yellow;
     }
 
     &--bottom {
@@ -104,6 +112,7 @@
   &__phone {
     margin-bottom: 8px;
     font-size: 20px;
+    color: inherit;
 
     @include onTablet {
       margin-bottom: 0;
@@ -112,6 +121,10 @@
 
     @include onDesktop {
       font-size: 36px;
+    }
+
+    &:hover {
+      color: $warm-yellow;
     }
   }
 
@@ -128,6 +141,7 @@
     color: inherit;
     border: 1px solid #CEB787;
     border-radius: 2px;
+    transition: .5s ease;
 
     @include onTablet {
       font-size: 16px;
@@ -135,6 +149,12 @@
 
     @include onDesktop {
       font-size: 18px;
+    }
+
+    &:hover {
+      font-weight: bold;
+      color: $dark-grey;
+      background-color: $warm-yellow;
     }
   }
 

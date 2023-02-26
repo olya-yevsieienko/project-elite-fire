@@ -2,15 +2,57 @@
   &__content {
     @extend %margin-section;
     position: relative;
+    height: 100vh;
   }
   
   &__main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4%;
+      right: 4%;
+      z-index: -2;
+      display: block;
+      width: 18%;
+      height: 35%;
+
+      background: rgba(175, 152, 112, 0.34);
+      filter: blur(75px);
+      border-radius: 300px;
+      transform: matrix(0.92, 0.39, 0.39, -0.92, 0, 0);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 12%;
+      right: 16%;
+      z-index: 1;
+      display: block;
+      width: 14%;
+      height: 18%;
+
+      background: rgba(201, 115, 53, 0.45);
+      filter: blur(75px);
+      border-radius: 300px;
+      transform: matrix(0.31, -0.95, -0.95, -0.31, 0, 0);
+    }
+
     @include onTablet {
       flex-direction: row;
+
+      &::before {
+        width: 28%;
+      }
+  
+      &::after {
+        width: 16%;
+        height: 40%;
+      }
     }
   }
 
@@ -30,53 +72,218 @@
     @include onTablet {
       margin: 60px 0 24px 0;
     }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: -200px;
+      z-index: -1;
+      display: block;
+      width: 623.63px;
+      height: 927.64px;
+
+      background: #000000;
+      filter: blur(250px);
+      border-radius: 300px;
+      transform: rotate(45deg);
+    }
   }
 
   &__descrptn {
     @extend %descrptn;
+    
+    @include onTablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__image-container {
+    position: relative;
+    margin-bottom: 20px;
     width: 100%;
     height: 100%;
-    max-width: 700px;
+    max-width: 680px;
+
+    @include onTablet {
+      top: 40px;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      display: block;
+      left: 22%;
+      top: 46%;
+      width: 13%;
+      height: 14%;
+      border: 1px solid $warm-yellow;
+      border-radius: 50%;
+      filter: drop-shadow(0px 4px 23px #FFE2A4);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 56%;
+      right: 38%;
+      z-index: 2;
+      display: block;
+      width: 26%;
+      height: 28%;
+      border: 2px solid $warm-yellow;
+      border-radius: 50%;
+      filter: drop-shadow(0px 8px 35px #FFE2A4);
+    }
   }
 
   &__image {
     position: relative;
     object-fit: cover;
     width: 100%;
+    z-index: 1;
   }
 
-  // &__light {
-  //   position: absolute;
-  //   right: 5%;
-  //   bottom: 30%;
-  //   width: 100%;
-  //   max-width: 600px;
-    
-  //   @include onTablet {
-  //     right: 0;
-  //     bottom: 40%;
-  //   }
-    
-  //   @include onDesktop {
-  //     right: 5%;
-  //     bottom: 34%;
-  //   }
-  // }
+  &__label {
+    position: absolute;
+    top: 20%;
+    right: 14%;
+    z-index: 3;
+    display: block;
+    width: 22%;
+    height: 24%;
+    border-radius: 50%;
+    background: radial-gradient(100% 65.98% at 100% 73.18%, #FFFFFF 0.31%, #FFE2A4 59.23%, #FFD47C 100%);
+  }
 
-  &__btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  &__label-text {
+    position: absolute;
+    top: 24%;
+    right: 19%;
+    z-index: 4;
+    display: block;
+    text-align: center;
 
     @include onTablet {
-      align-items: start;
+      right: 17%;
+    }
+
+    @include onDesktop {
+      right: 18%;
     }
   }
 
-  &__btns {
-    position: absolute;
+  &__label-p {
+    font-family: 'SecondaryFont', serif;
+    font-weight: 400;
+    font-size: 4px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #000000;
+
+    &:first-child {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 2px;
+      font-weight: 700;
+      font-size: 8px;
+    }
+
+    @include onTablet {
+      font-size: 6px;
+      line-height: 8px;
+
+      &:first-child {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 20px;
+      }
+  
+      &:nth-child(2) {
+        margin-bottom: 2px;
+        font-weight: 700;
+        font-size: 8px;
+      }
+    }
+
+    @include onDesktop {
+      font-size: 0.8vw;
+      line-height: 1.2vw;
+
+      &:first-child {
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 2vw;
+      }
+  
+      &:nth-child(2) {
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100px;
+
+      background: rgba(255, 207, 122, 0.72);
+      filter: blur(75px);
+      border-radius: 300px;
+      transform: matrix(-0.94, 0.35, 0.35, 0.94, 0, 0);
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 44px;
+      display: block;
+      width: 31px;
+      height: 0px;
+      border: 1px solid #949494;
+    }
+
+    @include onTablet {
+      justify-content: flex-start;
+      align-items: center;
+
+      &::after {
+        left: 47.5%;
+      }
+    }
+
+    @include onDesktop {
+      &::after {
+        left: 48.5%;
+      }
+    }
+  }
+
+  &__icons-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 120px;
+  }
+
+  &__text {
+    line-height: 24px;
   }
 }

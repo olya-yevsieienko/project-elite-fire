@@ -30,6 +30,8 @@
     }
     
     &--first {
+      margin-bottom: 20px;
+
       @include onTablet {
         margin-bottom: 40px;
       }
@@ -43,5 +45,10 @@
   &__image {
     display: block;
     width: 100%;
+    transition: transform .5 ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }

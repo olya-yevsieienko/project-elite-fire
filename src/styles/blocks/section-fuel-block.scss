@@ -1,11 +1,13 @@
 .section-fuel-block {
   &__content {
+    @extend %margin-section;
+    position: relative;
     display: flex;
     flex-direction: column;
 
     @include onTablet {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(320px, 570px));
       gap: 28px;
     }
 
@@ -14,34 +16,94 @@
     }
   }
 
-  &__first-title {
+  &__first-options {
+    margin-bottom: 20px;
+
     @include onTablet {
-      margin-top: 60px;
+      margin-bottom: 40px;
     }
   }
 
   &__title {
     @extend %title-h4;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     max-width: 360px;
   }
 
-  &__line {}
+  &__line {
+    margin-bottom: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 108px;
+      left: 0;
+      display: block;
+      width: 80%;
+      height: 1px;
+      background: rgba(255, 207, 122, 0.72);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 122px;
+      right: 30px;
+      display: block;
+      width: 12%;
+      height: 1px;
+      background: rgba(255, 207, 122, 0.72);
+      transform: rotate(55.49deg);
+    }
+
+    @include onTablet {
+      &::before {
+        width: 38%;
+      }
+
+      &::after {
+        left: 36.9%;
+        width: 5%;
+      }
+    }
+
+    @include onDesktop {
+      &::before {
+        top: 104px;
+      }
+
+      &::after {
+        top: 16.7%;
+      }
+    }
+  }
+
+  &__image-container {
+    margin-bottom: 20px;
+  }
 
   &__image {
     width: 100%;
+    object-fit: cover;
   }
 
   &__subtitle {
     @extend %title-h5;
+    margin-bottom: 24px;
   }
 
   &__options {
     display: flex;
+    justify-content: space-between;
   }
 
   &__equipment {
     display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      flex-direction: row;
+    }
   }
 
   &__list-item {
@@ -49,7 +111,7 @@
     line-height: 20px;
     
     @include onDesktop {
-      min-width: 340px;
+      min-width: 320px;
     }
     
     &--small {
@@ -58,14 +120,14 @@
       }
 
       @include onDesktop {
-        min-width: 240px;
+        min-width: 200px;
         max-width: 300px;
       }
     }
   }
 
   &__benefits {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   &__presentation {
